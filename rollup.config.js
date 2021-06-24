@@ -31,14 +31,14 @@ function serve() {
 }
 
 function typeCheck() {
-  return {
-    writeBundle() {
-      require('child_process').spawn('svelte-check', {
-	stdio: ['ignore', 'inherit', 'inherit'],
-	shell: true
-      });
-    }
-  }
+	return {
+		writeBundle() {
+			require('child_process').spawn('svelte-check', {
+				stdio: ['ignore', 'inherit', 'inherit'],
+				shell: true
+			});
+		}
+	}
 }
 
 export default {
@@ -50,6 +50,7 @@ export default {
 		file: 'public/build/bundle.js'
 	},
 	plugins: [
+		typeCheck(),
 		svelte({
 			preprocess: sveltePreprocess({ sourceMap: !production }),
 			compilerOptions: {
