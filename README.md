@@ -21,5 +21,5 @@ chmod +x init-letsencrypt.sh
 sudo ./init-letsencrypt.sh
 docker-compose up --build
 ```
-`docker-compose` exponerar port 80 och port 443. Se till att du trafik kan nå servern!
+`docker-compose` exponerar port 80 och port 443. Se till att trafik kan nå servern!
 SSL Certifikat sätts upp automatiskt mha let's encrypt.
