@@ -12,6 +12,5 @@ RUN npm run build
 FROM nginx:alpine AS run
 
 COPY --from=build /app/public /app
-COPY ./data/nginx/nginx.conf /etc/nginx/nginx.conf
 
 EXPOSE 80 443

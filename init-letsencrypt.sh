@@ -140,7 +140,7 @@ function reload_nginx {
 ###################################################################
 
 
-domains_list=("ardethelgdag.se www.ardethelgdag.se" "xn--rdethelgdag-k8a.se www.xn--rdethelgdag-k8a.se")
+domains_list=("xn--rdethelgdag-k8a.se www.xn--rdethelgdag-k8a.se")
 rsa_key_size=4096
 data_path="./data/certbot" # <-- change this to wherever you like
 dns_cred_path="" # set equal to empty string if not using a dns provider
