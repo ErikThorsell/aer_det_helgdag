@@ -3,7 +3,7 @@ version: "3"
 services:
   nginx_service:
     build: .
-    restart: unless-stopped
+    restart: always
     volumes:
       - ./data/nginx/nginx_https.conf:/etc/nginx/nginx.conf
       - ./data/certbot/conf:/etc/letsencrypt
@@ -15,7 +15,7 @@ services:
 
   certbot_service:
     image: certbot/certbot
-    restart: unless-stopped
+    restart: always
     volumes:
       - ./data/certbot/conf:/etc/letsencrypt
       - ./data/certbot/www:/var/www/certbot
